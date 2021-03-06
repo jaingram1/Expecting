@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-light fixed-top white">
+  <a class="navbar-brand" routerLink="/" routerLinkActive="active"><img src="../../assets/logo2.png" height="50"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-555"
+    aria-controls="navbarSupportedContent-555" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent-555">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/" routerLinkActive="active">Home
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/food" routerLinkActive="active">Food</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/doctor" routerLinkActive="active">Doctor</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/resources" routerLinkActive="active">Resources</a>
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto nav-flex-icons">
+        <ng-container *ngIf="!auth.isAuthenticated()">
+          <li class="nav-item d-flex justify-items-end mx-2">
+              <a routerLink="/auth/login" data-toggle="modal" data-target="#elegantModalForm"><i class="far fa-2x fa-user-circle text-dark"></i></a>
+          </li>
+        </ng-container>
+        <ng-container *ngIf="auth.isAuthenticated()">
+          <!-- Basic dropdown -->
+        <li class="nav-item avatar">
+          <a class="nav-link p-0 dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+        <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg" class="rounded-circle z-depth-0"
+        alt="avatar image" height="40">
+        <div class="dropdown-menu dropdown-menu-lg-right text-center">
+          <a class="dropdown-item" href="#">View Profile</a>
+          <a class="dropdown-item" routerLink="/settings">Settings <i class="fas fa-cog"></i></a>
+          <a class="dropdown-item" (click)="logout()">Sign out <i class="fas fa-sign-out-alt"></i></a>
+        </div>
+        </a>
+        </li>
+        <!-- Basic dropdown -->
+        </ng-container>
+    </ul>
+  </div>
+</nav>
+<br /><br /><br />

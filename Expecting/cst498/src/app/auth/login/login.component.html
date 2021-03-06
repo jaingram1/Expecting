@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row">
+      <div class="col-md-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-sigin my-5">
+          <div class="card-body">
+            <h1 class="card-title text-center">Login</h1>
+            <form [formGroup]="loginForm" (ngSubmit) = "login()" class="form-sigin">
+              <div class="form-label-group">
+                <input type="email" id="inputEmail"
+                      class="form-control"
+                      formControlName="email" placeholder="Email address" autofocus>
+                      <label for="inputEmail" class="">Email Address</label>
+              </div>
+              <div *ngIf="isValidInput('email')"
+                class="alert alert-danger">
+                <div *ngIf="loginForm.controls['email'].errors.required">
+                  Email is required.
+                </div>
+                <div *ngIf="loginForm.controls['email'].errors.pattern">
+                  Must be a valid email format.
+                </div>
+              </div>
+    
+              <div class="form-label-group">
+                <input type="password" id="inputPassword"
+                      class="form-control" placeholder="Password"
+                      required formControlName ="password">
+                      <label for="inputPassword" class="">Password</label>
+              </div>
+              <div *ngIf="isValidInput('password')"
+                class="alert alert-danger">
+                <div *ngIf="loginForm.controls['password'].errors.required">
+                  Password is required.
+                </div>
+              </div>
+              <p class="text-center">Not Registered? <a routerLink="/auth/signup">Signup now</a></p>
+              <button
+              [disabled]="!loginForm.valid"
+              type="submit" 
+              class="btn btn-warning btn-block rounded-pill"
+              >Sign In</button>
+            </form>
+          </div>
+        </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,131 @@
+<div class="container mt-5 blue lighten-5">
+    <div class="row pt-3">
+        <div class="col-lg-6 col-12">
+            <video width="560" height="315" controls style="width: 100%;">
+                <source src="../../assets/babyvideo.webm" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="col-lg-6 col-12">
+            <h1 class="text-center"> Website Overview </h1>
+            <p class="px-5 article"> This website is made for expecting parents that helps them before the baby arrives. The website consists of different options like suggested doctors and hospitals, helpful tips from other parents, and food places that offer healthier selections for pregnant women. From these choices, expecting parents can schedule appointments or set reminders from confirmed appoinments. Another tool that it suggests is the food page. The food page shows different restaurants that pregnant woman can eat and choose different healthy choices. There are many more pages like resources where it shows helpful tips. These essential tips are advice from other parents that have gone through the same experiences. </p>
+        </div>
+    </div>
+</div>
+<!--Section: Testimonials-->
+<section class="text-center mt-4 mb-5">
+    <div class="container">
+    <!--Section heading-->
+    <h2 class="pt-4 text-uppercase">Meet The Parents</h2>
+    <!--Section description-->
+    <p class="grey-text mb-5 mt-5 px-3">Meet Katherine, Keirra, and Kimberly -- Current users who have been apart of this community since the first week they were pregnant. Check out their story below! </p>
+
+    <div class="row">
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-12 mb-4">
+
+            <!--Card-->
+            <div class="card testimonial-card">
+
+                <!--Background color-->
+                <div class="card-up sunny-morning-gradient">
+                </div>
+
+                <!--Avatar-->
+                <div class="avatar mx-auto"><img src="https://cdn.cdnparenting.com/articles/2018/06/787807456-H.jpg" height="250" width="250" class="rounded-circle img-responsive" alt="Example photo">
+                </div>
+
+                <div class="card-body">
+                    <!--Name-->
+                    <h4 class="card-title mt-1">Katherine Morrison</h4>
+                    <hr>
+                    <!--Quotation-->
+                    <p><i class="fas fa-quote-left"></i> Many women don't hear that birth can be a beautiful and transforming experience. They focus on it as a painful experience. I experienced everything!</p>
+                </div>
+
+            </div>
+            <!--Card-->
+
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-12 mb-4">
+
+            <!--Card-->
+            <div class="card testimonial-card">
+
+                <!--Background color-->
+                <div class="card-up rainy-ashville-gradient">
+                </div>
+
+                <!--Avatar-->
+                <div class="avatar mx-auto"><img src="https://www.eatright.org/-/media/eatrightimages/health/pregnancy/prenatalwellness/healthyweightduringpregnancy513875768.jpg" height="250" width="250" class="rounded-circle img-responsive" alt="Example photo">
+                </div>
+
+                <div class="card-body">
+                    <!--Name-->
+                    <h4 class="card-title mt-1">Keirra Thompson</h4>
+                    <hr>
+                    <!--Quotation-->
+                    <p><i class="fas fa-quote-left"></i> You might be able to avoid an episiotomy and a lot of tearing by asking for a perineal massage! I'd like to kiss my nurses at my second birth for performing it!</p>
+                </div>
+
+            </div>
+            <!--Card-->
+
+        </div>
+        <!--Grid column-->
+
+        <!--Grid column-->
+        <div class="col-lg-4 col-md-12 mb-4">
+
+            <!--Card-->
+            <div class="card testimonial-card">
+
+                <!--Background color-->
+                <div class="card-up lady-lips-gradient"></div>
+
+                <!--Avatar-->
+                <div class="avatar mx-auto"><img src="https://www.cdc.gov/vaccines/pregnancy/images/pregnant-woman-outside.jpg" height="250" width="250" class="rounded-circle img-responsive" alt="Example photo">
+                </div>
+
+                <div class="card-body">
+                    <!--Name-->
+                    <h4 class="card-title mt-1"> Kimberly Mae Chen</h4>
+                    <hr>
+                    <!--Quotation-->
+                    <p><i class="fas fa-quote-left"></i> No one ever told me how funny parenthood is or how much I would laugh. We are always told the cautionary tales; never about the joy. I can't wait to have my baby!</p>
+                </div>
+
+            </div>
+            <!--Card-->
+
+        </div>
+        <!--Grid column-->
+
+    </div>
+    </div>
+</section>
+<!--Section: Testimonials-->
+<!-- <div class="card text-center yellow p-4">
+    <div class="card-body d-flex justify-content-center align-items-end">
+      <h4 class="card-title font-weight-bold text-uppercase w-30 text-left mr-5">Join our Community Now</h4 >
+      <a routerLink="/signup" class="btn btn-dark">Sign Up <i class="fa fa-lg fa-arrow-right ml-2"></i></a>
+    </div>
+  </div> -->
+  <ng-container *ngIf="!auth.isAuthenticated()">
+    <div class="card-text-center rgba-yellow-light p-4">
+      <div class="row card-body d-flex justify-content-center align-items-end">
+          <div class="col-lg-7">
+            <h4 class="card-title font-weight-bold text-uppercase text-right mr-5">Join our Community Now</h4>
+          </div>
+          <div class="col-lg-5">
+            <a routerLink="/auth/signup" class="btn btn-dark">Sign Up <i class="fa fa-lg fa-arrow-right"></i></a>
+          </div>
+      </div>
+  </div>
+</ng-container>
+
+  

@@ -1,0 +1,88 @@
+<div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div *ngIf="errors.length > 0" class="alert alert-danger">
+          <ul *ngFor = "let error of errors">
+              <li>{{ error }}</li>
+          </ul>
+          </div>
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <h5 class="card-title text-center">Sign Up</h5>
+            <form class="form-signin" #registerForm="ngForm">
+                <div class="form-label-group">
+                   <input type="text"
+                           class="form-control"
+                           [(ngModel)] = "formData.username"
+                           id="username" name="username"
+                           #username = "ngModel" 
+                           required placeholder="Username">
+                           <label for="username" class="">Username</label>
+                </div>
+                  <div *ngIf="username.invalid && (username.dirty || username.touched)"
+                    class="alert alert-danger">
+                    <div *ngIf="username.errors!.required">
+                      Username is required
+                    </div>
+                  </div>
+        
+                  <div class="form-label-group">
+                    <input type="email"
+                           class="form-control"
+                           [(ngModel)] = "formData.email"
+                           id="email" name="email"
+                           #email = "ngModel" 
+                           required placeholder="Email">
+                           <label for="email">Email</label>
+                  </div>
+                  <div *ngIf="email.invalid && (email.dirty || email.touched)"
+                    class="alert alert-danger">
+                    <div *ngIf="email.errors!.required">
+                      Email is required
+                    </div>
+                  </div>
+        
+                  <div class="form-label-group">
+                    <input type="password"
+                           class="form-control"
+                           [(ngModel)] = "formData.password"
+                           #password = "ngModel" 
+                           id="password" name="password"
+                           required placeholder="Password">
+                           <label for="password">Password</label>
+                  </div>
+                  <div *ngIf="password.invalid && (password.dirty || password.touched)"
+                    class="alert alert-danger">
+                    <div *ngIf="password.errors!.required">
+                      Password is required
+                    </div>
+                  </div>
+        
+                  <div class="form-label-group">
+                    <input type="password"
+                           class="form-control"
+                           [(ngModel)] = "formData.passwordConfirmation"
+                           #passwordConfirmation = "ngModel" 
+                           id="passwordConfirmation" name="passwordConfirmation"
+                           required placeholder="Confirm Confirmation">
+                           <label for="passwordConfirmation">Confirm Password</label>
+                  </div>
+                   <div *ngIf="passwordConfirmation.invalid && (passwordConfirmation.dirty || passwordConfirmation.touched)"
+                    class="alert alert-danger">
+                    <div *ngIf="passwordConfirmation.errors!.required">
+                      Confirm Password is required
+                    </div>
+                  </div>
+                  <button 
+                  (click) = "signup()"
+                  type="submit" 
+                  class="btn btn-warning btn-block"
+                  [disabled] = "!registerForm.form.valid">Register</button>
+                  <hr class="my-4">
+                  <p class="text-center">Already Registered? <a routerLink="/auth/login">Login now</a></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
